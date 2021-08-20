@@ -149,7 +149,7 @@ window.onload = function () {
 
                     for (let baSo of list3So) {
                         if (val1 == baSo[0] && val2 >= baSo[1] && val2 < baSo[2] && baSo[3] == false) {
-                            console.log(getTinme(), 'Dat tien ', val1, val2, id, rel, ...baSo);
+                            console.warn(getTinme(), 'Dat tien ', val1, val2, id, rel, ...baSo);
 
                             //dat tien
                             $(`div[id='${id}']`).trigger('click');
@@ -161,9 +161,9 @@ window.onload = function () {
                             let idspan = `sc1Odds${r}`;
                             let valspan = $(`span[id=${idspan}]`).text();
                             valspan *= 1;
-                            console.log(getTinme(), 'span', valspan);
+                            console.warn(getTinme(), 'span', valspan);
                             if (val1 == baSo[0] && valspan >= baSo[1] && valspan < baSo[2] && baSo[3] == false) {
-                                console.log(getTinme(), 'dat thanh cong');
+                                console.warn(getTinme(), 'dat thanh cong');
                                 baSo[3] = true;
                                 $(`input[onclick="CartS1.Check()"]`).trigger('click');
                                 // window.CartS1.Check();
@@ -171,7 +171,7 @@ window.onload = function () {
                                 $(`input[onclick="CartS2.Confirm()"]`).trigger('click');
                                 // CartS2.Confirm();
                             } else {
-                                console.log(getTinme(), 'dat that bai');
+                                console.warn(getTinme(), 'dat that bai');
                             }
 
                         }
