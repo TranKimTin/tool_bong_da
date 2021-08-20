@@ -1,0 +1,35 @@
+{
+    "name": "tool bong da",
+    "description": "Embrace the inner unicorn and reflect on the page background.",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": {
+            "19": "icon.png",
+            "38": "icon.png"
+        },
+        "default_title": "tool bong da Extension",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "page": "background.html",
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.net/bbview/Games.aspx"
+            ],
+            "js": [
+                "jquery.js",
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "clipboardWrite",
+        "storage",
+        "tabs"
+    ]
+}
